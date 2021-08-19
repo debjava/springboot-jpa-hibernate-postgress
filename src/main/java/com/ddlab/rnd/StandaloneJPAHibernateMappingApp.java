@@ -4,16 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.ddlab.rnd.many2many.bidirectional.TestMany2ManyBidirectional;
-import com.ddlab.rnd.many2many.unidirectional.TestMany2ManyUnidirectional;
-import com.ddlab.rnd.one2many.bidirectional.TestOne2ManyBidirectional;
-import com.ddlab.rnd.one2many.unidirectional.TestOne2ManyUniDirectional;
-import com.ddlab.rnd.one2one.bidirectional.TestOne2OneBidirectional;
-import com.ddlab.rnd.one2one.unidirectional.TestOne2OneUnidirectional;
+import com.ddlab.rnd.cache.TestUserCache;
 
 @SpringBootApplication
 public class StandaloneJPAHibernateMappingApp {
-
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(StandaloneJPAHibernateMappingApp.class, args);
@@ -34,7 +28,13 @@ public class StandaloneJPAHibernateMappingApp {
 //		TestMany2ManyUnidirectional.storeInfo(applicationContext);
 //		
 //		// Many-Many Bidirectional
-		TestMany2ManyBidirectional.storeInfo(applicationContext);
+//		TestMany2ManyBidirectional.storeInfo(applicationContext);
+		
+//		TestBatchInsert.batchInsert(applicationContext);
+		
+//		TestBatchInsert.batchInsertUsingEntityManager(applicationContext);
+		
+		TestUserCache.testCache(applicationContext);
 		
 	}
 
